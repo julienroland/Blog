@@ -1,13 +1,13 @@
-<?php namespace Modules\Blog\Http\Controllers\Admin;
+<?php namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use Laracasts\Flash\Flash;
-use Modules\Blog\Entities\Category;
-use Modules\Blog\Http\Requests\StoreCategoryRequest;
-use Modules\Blog\Http\Requests\UpdateCategoryRequest;
-use Modules\Blog\Repositories\CategoryRepository;
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Blog\Entities\Category;
+use Blog\Http\Requests\StoreCategoryRequest;
+use Blog\Http\Requests\UpdateCategoryRequest;
+use Blog\Repositories\CategoryRepository;
+use Core\Http\Controllers\Admin\AdminBaseController;
 
 class CategoryController extends AdminBaseController
 {

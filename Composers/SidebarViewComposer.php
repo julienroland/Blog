@@ -1,9 +1,9 @@
-<?php namespace Modules\Blog\Composers;
+<?php namespace Blog\Composers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Contracts\View\View;
-use Modules\Core\Composers\BaseSidebarViewComposer;
+use Core\Composers\BaseSidebarViewComposer;
 
 class SidebarViewComposer extends BaseSidebarViewComposer
 {

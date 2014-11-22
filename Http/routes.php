@@ -2,8 +2,8 @@
 
 use Illuminate\Routing\Router;
 
-$router->model('posts', 'Modules\Blog\Entities\Post');
-$router->model('categories', 'Modules\Blog\Entities\Category');
+$router->model('posts', 'Blog\Entities\Post');
+$router->model('categories', 'Blog\Entities\Category');
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +11,7 @@ $router->model('categories', 'Modules\Blog\Entities\Category');
 |--------------------------------------------------------------------------
 */
 if (! App::runningInConsole()) {
-    $router->group(['namespace' => 'Modules\Blog\Http\Controllers'], function (Router $router) {
+    $router->group(['namespace' => 'Blog\Http\Controllers'], function (Router $router) {
         $routes = app('Asgard.routes');
         foreach(LaravelLocalization::getSupportedLocales() as $locale => $language) {
             if (isset($routes['blog'][$locale])) {
@@ -30,7 +30,7 @@ if (! App::runningInConsole()) {
 */
 $router->group(['prefix' => LaravelLocalization::setLocale(), 'before' => 'LaravelLocalizationRedirectFilter|auth.admin|permissions'], function(Router $router)
 {
-    $router->group(['prefix' => Config::get('core::core.admin-prefix'), 'namespace' => 'Modules\Blog\Http\Controllers'], function (Router $router) {
+    $router->group(['prefix' => Config::get('core::core.admin-prefix'), 'namespace' => 'Blog\Http\Controllers'], function (Router $router) {
 
         $router->resource('posts', 'Admin\PostController', ['except' => ['show'], 'names' => [
             'index' => 'dashboard.post.index',
@@ -60,7 +60,7 @@ $router->group(['prefix' => LaravelLocalization::setLocale(), 'before' => 'Larav
 | Api routes
 |--------------------------------------------------------------------------
 */
-$router->group(['prefix' => 'api', 'namespace' => 'Modules\Blog\Http\Controllers'], function (Router $router) {
+$router->group(['prefix' => 'api', 'namespace' => 'Blog\Http\Controllers'], function (Router $router) {
     $router->resource('tag', 'Api\TagController');
     $router->get('tag/findByName/{name}', 'Api\TagController@findByName');
 });

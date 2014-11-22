@@ -1,4 +1,4 @@
-<?php namespace Modules\Blog\Entities;
+<?php namespace Blog\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 

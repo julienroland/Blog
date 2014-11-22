@@ -1,10 +1,10 @@
-<?php namespace Modules\Blog\Repositories;
+<?php namespace Blog\Repositories;
 
-use Modules\Core\Repositories\BaseRepository;
+use Core\Repositories\BaseRepository;
 
 /**
  * Interface TagRepository
- * @package Modules\Blog\Repositories
+ * @package Blog\Repositories
  */
 interface TagRepository extends BaseRepository
 {

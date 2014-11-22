@@ -1,4 +1,4 @@
-<?php namespace Modules\Blog\Providers;
+<?php namespace Blog\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -10,7 +10,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $rootUrlNamespace = 'Modules\Blog\Http\Controllers';
+    protected $rootUrlNamespace = 'Blog\Http\Controllers';
 
     /**
      * The controllers to scan for route annotations.
@@ -18,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var array
      */
     protected $scan = [
-        'Modules\Blog\Http\Controllers',
+        'Blog\Http\Controllers',
     ];
 
     /**

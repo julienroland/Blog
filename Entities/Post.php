@@ -1,4 +1,4 @@
-<?php namespace Modules\Blog\Entities;
+<?php namespace Blog\Entities;
 
 use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
@@ -12,11 +12,11 @@ class Post extends Model
 
     public function category()
     {
-        return $this->hasOne('Modules\Blog\Entities\Category');
+        return $this->hasOne('Blog\Entities\Category');
     }
 
     public function tags()
     {
-        return $this->belongsToMany('Modules\Blog\Entities\Tag');
+        return $this->belongsToMany('Blog\Entities\Tag');
     }
 }

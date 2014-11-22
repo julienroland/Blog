@@ -1,13 +1,13 @@
-<?php namespace Modules\Blog\Providers;
+<?php namespace Blog\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Modules\Blog\Entities\Category;
-use Modules\Blog\Entities\Post;
-use Modules\Blog\Entities\Tag;
-use Modules\Blog\Repositories\Eloquent\EloquentCategoryRepository;
-use Modules\Blog\Repositories\Eloquent\EloquentPostRepository;
-use Modules\Blog\Repositories\Eloquent\EloquentTagRepository;
+use Blog\Entities\Category;
+use Blog\Entities\Post;
+use Blog\Entities\Tag;
+use Blog\Repositories\Eloquent\EloquentCategoryRepository;
+use Blog\Repositories\Eloquent\EloquentPostRepository;
+use Blog\Repositories\Eloquent\EloquentTagRepository;
 
 class BlogServiceProvider extends ServiceProvider
 {
@@ -53,7 +53,7 @@ class BlogServiceProvider extends ServiceProvider
     {
         foreach ($this->filters as $module => $filters) {
             foreach ($filters as $name => $filter) {
-                $class = "Modules\\{$module}\\Http\\Filters\\{$filter}";
+                $class = "\{$module}\\Http\\Filters\\{$filter}";
 
                 $router->filter($name, $class);
             }
@@ -73,21 +73,21 @@ class BlogServiceProvider extends ServiceProvider
     private function registerBindings()
     {
         $this->app->bind(
-            'Modules\Blog\Repositories\PostRepository',
+            'Blog\Repositories\PostRepository',
             function() {
                 return new EloquentPostRepository(new Post);
             }
         );
 
         $this->app->bind(
-            'Modules\Blog\Repositories\CategoryRepository',
+            'Blog\Repositories\CategoryRepository',
             function() {
                 return new EloquentCategoryRepository(new Category);
             }
         );
 
         $this->app->bind(
-            'Modules\Blog\Repositories\TagRepository',
+            'Blog\Repositories\TagRepository',
             function() {
                 return new EloquentTagRepository(new Tag);
             }

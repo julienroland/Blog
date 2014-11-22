@@ -1,4 +1,4 @@
-<?php namespace Modules\Blog\Http\Controllers;
+<?php namespace Blog\Http\Controllers;
 
 class PublicController
 {

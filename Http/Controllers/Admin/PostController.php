@@ -1,15 +1,15 @@
-<?php namespace Modules\Blog\Http\Controllers\Admin;
+<?php namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use Laracasts\Flash\Flash;
-use Modules\Blog\Entities\Post;
-use Modules\Blog\Http\Requests\StorePostRequest;
-use Modules\Blog\Http\Requests\UpdatePostRequest;
-use Modules\Blog\Repositories\CategoryRepository;
-use Modules\Blog\Repositories\PostRepository;
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Blog\Entities\Post;
+use Blog\Http\Requests\StorePostRequest;
+use Blog\Http\Requests\UpdatePostRequest;
+use Blog\Repositories\CategoryRepository;
+use Blog\Repositories\PostRepository;
+use Core\Http\Controllers\Admin\AdminBaseController;
 
 class PostController extends AdminBaseController
 {

@@ -1,6 +1,6 @@
-<?php namespace Modules\Blog\Repositories;
+<?php namespace Blog\Repositories;
 
-use Modules\Core\Repositories\BaseRepository;
+use Core\Repositories\BaseRepository;
 
 interface PostRepository extends BaseRepository
 {

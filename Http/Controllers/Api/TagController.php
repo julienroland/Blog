@@ -1,9 +1,9 @@
-<?php namespace Modules\Blog\Http\Controllers\Api;
+<?php namespace Blog\Http\Controllers\Api;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
-use Modules\Blog\Http\Requests\CreateTagRequest;
-use Modules\Blog\Repositories\TagRepository;
+use Blog\Http\Requests\CreateTagRequest;
+use Blog\Repositories\TagRepository;
 
 class TagController
 {

@@ -1,9 +1,9 @@
-<?php namespace Modules\Blog\Repositories\Eloquent;
+<?php namespace Blog\Repositories\Eloquent;
 
 use Illuminate\Support\Facades\App;
-use Modules\Blog\Entities\Tag;
-use Modules\Blog\Repositories\TagRepository;
-use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
+use Blog\Entities\Tag;
+use Blog\Repositories\TagRepository;
+use Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentTagRepository extends EloquentBaseRepository implements TagRepository
 {

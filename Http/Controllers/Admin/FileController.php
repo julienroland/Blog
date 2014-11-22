@@ -1,6 +1,6 @@
-<?php namespace Modules\Blog\Http\Controllers\Admin;
+<?php namespace Blog\Http\Controllers\Admin;
 
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Core\Http\Controllers\Admin\AdminBaseController;
 
 class FileController extends AdminBaseController
 {

@@ -1,10 +1,10 @@
-<?php namespace Modules\Blog\Repositories;
+<?php namespace Blog\Repositories;
 
-use Modules\Core\Repositories\BaseRepository;
+use Core\Repositories\BaseRepository;
 
 /**
  * Interface CategoryRepository
- * @package Modules\Blog\Repositories
+ * @package Blog\Repositories
  */
 interface CategoryRepository extends BaseRepository
 {

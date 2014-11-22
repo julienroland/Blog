@@ -1,9 +1,9 @@
-<?php namespace Modules\Blog\Repositories\Eloquent;
+<?php namespace Blog\Repositories\Eloquent;
 
-use Modules\Blog\Entities\Post;
-use Modules\Blog\Repositories\PostRepository;
-use Modules\Core\Internationalisation\Helper;
-use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
+use Blog\Entities\Post;
+use Blog\Repositories\PostRepository;
+use Core\Internationalisation\Helper;
+use Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentPostRepository extends EloquentBaseRepository implements PostRepository
 {
