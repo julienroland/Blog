@@ -53,7 +53,7 @@ class BlogServiceProvider extends ServiceProvider
     {
         foreach ($this->filters as $module => $filters) {
             foreach ($filters as $name => $filter) {
-                $class = "\{$module}\\Http\\Filters\\{$filter}";
+                $class = "{$module}\\Http\\Filters\\{$filter}";
 
                 $router->filter($name, $class);
             }
